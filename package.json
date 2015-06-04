@@ -1,0 +1,24 @@
+{
+  "name": "ME_Route",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --harmony server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paper14/ME_Route.git"
+  },
+  "author": "Nicko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paper14/ME_Route/issues"
+  },
+  "homepage": "https://github.com/paper14/ME_Route",
+  "dependencies": {
+    "koa-router": "^5.1.1",
+    "koa.io": "0.0.3"
+  }
+}
