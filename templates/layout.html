@@ -2,6 +2,10 @@
 <html>
 <head>
 	<title>Module.Export</title>
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+
+	{% block css %}{% endblock %}
+
 </head>
 <header class="header">
 <nav class="main_nav">
@@ -12,8 +16,12 @@
 </nav>
 </header>
 <body>
-	{% block main_container %}
-	
-	{% endblock %}
+	{% block main_container %}{% endblock %}
 </body>
+<script type="text/javascript" src="requirejs/require.js"></script>
+<script type="text/javascript" src="js/require_config.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+{% block js %}{% endblock %}
+
 </html>

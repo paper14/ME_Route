@@ -2,16 +2,13 @@
 
 var router = require('koa-router')();
 
-module.exports = function(ctrl) {
-	console.log("CTRL: ", ctrl);
+module.exports = function(ctrl, p) {
+  console.log("CTRL: ", ctrl);
+  console.log("P: ", p.test);
+
   router
-  	// .get("/", ctrl.page.homepage)
-    .get('/', function * (next) {
-      yield this.render('pages/home');
-    })
-    .get('/about', function * (next) {
-      yield this.render('pages/about');
-    });
+    .get("/", ctrl.page.homepage)
+    .get("/about", ctrl.page.about);
 
   return router;
 }

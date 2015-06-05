@@ -7,8 +7,7 @@
   },
   "main": "server.js",
   "scripts": {
-    "start": "nodemon --harmony index.js",
-    "postinstall": "bower install"
+    "start": "nodemon -e js,html --harmony server.js"
   },
   "repository": {
     "type": "git",
@@ -22,11 +21,17 @@
   "homepage": "https://github.com/paper14/ME_Route",
   "dependencies": {
     "babel": "^5.4.7",
+    "bower": "^1.4.1",
     "co": "^4.5.4",
+    "koa-body-parser": "^1.1.2",
+    "koa-compress": "^1.0.8",
+    "koa-locals": "^0.3.0",
     "koa-router": "^5.1.1",
     "koa-static": "^1.4.9",
     "koa-swig": "^2.0.0",
     "koa.io": "0.0.3",
+    "mongoose": "^4.0.4",
+    "mongoose-timestamp": "^0.4.0",
     "require-directory": "^2.1.1"
   }
 }
