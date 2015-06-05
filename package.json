@@ -2,10 +2,13 @@
   "name": "ME_Route",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "iojs": "^1.6.4"
+  },
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --harmony server.js"
+    "start": "nodemon --harmony index.js",
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
@@ -18,9 +21,12 @@
   },
   "homepage": "https://github.com/paper14/ME_Route",
   "dependencies": {
+    "babel": "^5.4.7",
+    "co": "^4.5.4",
     "koa-router": "^5.1.1",
     "koa-static": "^1.4.9",
     "koa-swig": "^2.0.0",
-    "koa.io": "0.0.3"
+    "koa.io": "0.0.3",
+    "require-directory": "^2.1.1"
   }
 }

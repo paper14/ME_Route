@@ -1,3 +1,5 @@
+'use strict'
+
 var koa = require('koa.io');
 var router = require('koa-router')();
 var serve = require('koa-static');
@@ -5,7 +7,7 @@ var render = require('koa-swig');
 var path = require('path');
 var url = require('./url.js');
 
-var app = koa();
+var app = module.exports = koa();
 
 app.context.render = render({
   root: path.join(__dirname, 'templates'),
@@ -18,14 +20,20 @@ app.context.render = render({
   // extensions: extensions
 });
 
-console.log("ROUTER TEST: ", url());
+// console.log("ROUTER TEST: ", url());
 // console.log("ROUTER: ", router);
 
 
 // app.use(serve(__dirname + '/assets'));
 
+var apps = require('./applications');
 
-var router = url();
+console.log("APPS: ", apps.controllers);
+
+console.log("URL: ", url(apps));
+
+console.log("APPS CONTROLLER: ", apps.controllers.page);
+var router = url(apps.controllers);
 app
   .use(router.routes())
   .use(router.allowedMethods());
