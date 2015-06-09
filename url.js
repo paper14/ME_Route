@@ -8,7 +8,9 @@ module.exports = function(ctrl, p) {
 
   router
     .get("/", ctrl.page.homepage)
-    .get("/about", ctrl.page.about);
+    .get("/about", ctrl.page.about)
+    .get("/test", ctrl.page.testing)
+    .get("/test/:name", ctrl.page.testing);
 
   return router;
 }

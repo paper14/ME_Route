@@ -14,13 +14,12 @@ var app = koa();
 
 app.use(bodyParser());
 
-locals(app, {});
+// locals(app, {});
 
-this.locals = {};
-this.locals.test = "Nickos!";
+// this.locals = {};
+// this.locals.test = "Nickos!";
 
 console.log("LOCALS: ", this.locals);
-
 app.use(function * (next) {
   this.render = swig({
     root: path.join(__dirname, 'templates'),
@@ -30,6 +29,7 @@ app.use(function * (next) {
     locals: this.locals
   });
   yield * next;
+
 });
 // app.context.swig = swig({
 //   root: path.join(__dirname, 'templates'),

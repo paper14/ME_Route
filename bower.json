@@ -1,0 +1,23 @@
+{
+  "name": "ME_Route",
+  "main": "index.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/paper14/ME_Route",
+  "authors": [
+    "nicko <nicko.bsu@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "jquery": "~2.1.4",
+    "react": "~0.13.3",
+    "requirejs": "~2.1.18"
+  }
+}
